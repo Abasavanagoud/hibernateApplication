@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hormex1.entities.Account" table="account_info">
+	<id name="accountNo" column="Account_no"/>
+	<property name="accountHolderName" column="account_holder_name"/>
+	<property name="accountType" column="account_type"/>
+	<property name="mobileNO" column="mobileNo"></property>
+	<property name="emailId" column="emailId"/>
+	<property name="balance" column="balance"></property>	
+	</class>
+</hibernate-mapping>
