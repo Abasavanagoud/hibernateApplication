@@ -5,11 +5,18 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.horemex2.entities.Bank;
+import com.hormex2.helper.SessionFactoryRegistry;
 
 public class BankDao {
 	public Bank getBank(int bankno) {
+		SessionFactory sessionFactory=null;
 		
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		/*
+		 * SessionFactory sessionFactory = new
+		 * Configuration().configure().buildSessionFactory(); Session session =
+		 * sessionFactory.openSession();
+		 */
+		sessionFactory=SessionFactoryRegistry.getSessionFactroy();
 		Session session = sessionFactory.openSession();
 		Bank bank = session.get(Bank.class, bankno);
 		return bank;

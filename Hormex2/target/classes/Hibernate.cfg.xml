@@ -11,5 +11,6 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<mapping resource="com\horemex2\entities\Bank.xml"/>
+		<mapping resource="com\horemex2\entities\Address.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>                                         

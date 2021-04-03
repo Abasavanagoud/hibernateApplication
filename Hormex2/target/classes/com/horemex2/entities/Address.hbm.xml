@@ -3,13 +3,14 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.horemex2.entities">
 	<class name="Address" >
-		<id name="addressNO">
+		<id name="addressNo">
 			<column name="address_no"/>
 		</id>
-		<property name="streetAddress" column="street_address"/>
+		<property name="streetAdddress" column="street_address"/>
 		<property name="city"/>
 		<property name="state"/>
 		<property name="zip"/>
+		<property name="country"/>
 	</class>
 
 </hibernate-mapping>
