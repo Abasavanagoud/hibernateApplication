@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.horemex2.entities">
+	<class name="Address" >
+		<id name="addressNO">
+			<column name="address_no"/>
+		</id>
+		<property name="streetAddress" column="street_address"/>
+		<property name="city"/>
+		<property name="state"/>
+		<property name="zip"/>
+	</class>
+
+</hibernate-mapping>
