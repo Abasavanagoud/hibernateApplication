@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.horemex2.entities">
+	<class name="Bank" >
+		<id name="bankno">
+			<column name="bank_no"/>
+		</id>
+		<property name="bankName">
+			<column name="bank_name"/>
+		</property>
+		<property name="branchName">
+			<column name="branch_name"/>
+		</property>
+		<property name="location"/>
+		<property name="city"/>
+		<property name="state"/>
+	</class>
+	
+</hibernate-mapping>
