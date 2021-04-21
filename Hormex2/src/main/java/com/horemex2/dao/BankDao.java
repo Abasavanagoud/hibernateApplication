@@ -9,17 +9,22 @@ import com.hormex2.helper.SessionFactoryRegistry;
 
 public class BankDao {
 	public Bank getBank(int bankno) {
-		SessionFactory sessionFactory=null;
-		
-		/*
-		 * SessionFactory sessionFactory = new
-		 * Configuration().configure().buildSessionFactory(); Session session =
-		 * sessionFactory.openSession();
-		 */
-		sessionFactory=SessionFactoryRegistry.getSessionFactroy();
-		Session session = sessionFactory.openSession();
-		Bank bank = session.get(Bank.class, bankno);
-		return bank;
-		
+		SessionFactory sessionFactory = null;
+		Bank bank = null;
+		Session session = null;
+		try {
+			/*
+			 * SessionFactory sessionFactory = new
+			 * Configuration().configure().buildSessionFactory(); Session session =
+			 * sessionFactory.openSession();
+			 */
+			sessionFactory = SessionFactoryRegistry.getSessionFactroy();
+			session = sessionFactory.openSession();
+			bank = session.get(Bank.class, bankno);
+			return bank;
+		} finally {
+			session.close();
+		}
+
 	}
 }

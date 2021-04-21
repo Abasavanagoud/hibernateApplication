@@ -8,8 +8,11 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- By using below tag we are enhanced the connection pool size -->
+		<property name="hibernate.connection.pool_size">5</property>
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
+		<property name="hibernate.transaction.coordinator_class"></property>
 		<mapping resource="com\horemex2\entities\Bank.xml"/>
 		<mapping resource="com\horemex2\entities\Address.hbm.xml"/>
 	</session-factory>

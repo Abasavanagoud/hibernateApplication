@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hbx3.enties">
+	<class name="Bike" table="bike">
+		<id name="bikeNo" column="bike_no" />
+		<property name="bikeModelName" column="bike_model_name" />
+		<property name="Manufacturer" column="manufacturer" />
+		<property name="rtaRegistrationNumber"
+			column="rta_registration_no" />
+		<property name="price" column="price" />
+
+
+	</class>
+</hibernate-mapping>

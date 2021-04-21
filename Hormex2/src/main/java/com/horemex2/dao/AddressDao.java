@@ -10,13 +10,18 @@ public class AddressDao {
 	public Address getAddress(int addressNO) {
 		Address address=null;
 		SessionFactory sessionFactory=null;
+		Session session=null;
+		try {
+			
 		
 		//Session session = new Configuration().configure().buildSessionFactory().openSession();
 			sessionFactory=SessionFactoryRegistry.getSessionFactroy();
-			Session session = sessionFactory.openSession();
-		address=session.get(Address.class, 1);
+			session = sessionFactory.openSession();
+		    address=session.get(Address.class, 1);
 		
 		return address;
-		
+		}finally {
+			session.close();
+		}
 	}
 }
